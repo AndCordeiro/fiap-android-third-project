@@ -12,55 +12,50 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnCalculate.setOnClickListener {
-            priceCalculator()
+        btnConvert.setOnClickListener {
+            converter()
         }
     }
 
 
-    // Função para calculo de preço
+    // Função para converter metros em centimetros
     @SuppressLint("SetTextI18n")
-    private fun priceCalculator() {
-        val alcoholPrice = etAlcohol.text.toString()
-        val gasolinePrice = etGasoline.text.toString()
+    private fun converter() {
+        val name = etName.text.toString()
+        val meters = etMeters.text.toString()
 
-        val fieldValidated = validateFields(alcoholPrice, gasolinePrice)
+        val fieldValidated = validateFields(name, meters)
 
         if (fieldValidated) {
-            calculateBetterPrice(alcoholPrice, gasolinePrice)
+            convertMetersToCM(name, meters)
         } else {
-            tvResult.text = "Preencha os preços primeiro!!!"
+            tvResult.text = "Preencha os campos primeiro!!!"
         }
     }
 
     // Função para validar os campos
-    private fun validateFields(alcoholPrice: String, gasolinePrice: String): Boolean {
+    private fun validateFields(name: String, meters: String): Boolean {
 
-        // Valida o campo alcool
-        if(alcoholPrice == ""){
+        // Valida o campo nome
+        if (name == "") {
             return false
         }
 
-        // Valida o campo gasolina
-        if (gasolinePrice == ""){
+        // Valida o campo metros
+        if (meters == "") {
             return false
         }
 
         return true
     }
 
-    // Função para calcular o melhor preço
+    // Função para conveter metros para centimetros
     @SuppressLint("SetTextI18n")
-    private fun calculateBetterPrice(alcoholPrice: String, gasolinePrice: String) {
-        val alcoholValue = alcoholPrice.toDouble()
-        val gasolineValue = gasolinePrice.toDouble()
+    private fun convertMetersToCM(name: String, meters: String) {
+        val metersValue = meters.toDouble()
 
-        val result = alcoholValue / gasolineValue
+        val result = metersValue * 100
 
-        if (result >= 0.7) {
-            tvResult.text = "Melhor utilizar gasolina!!!"
-        } else {
-            tvResult.text = "Melhor utilizar alcool!!!"
-        }
+        tvResult.text = "$name sua conversão é: $result cm"
     }
 }

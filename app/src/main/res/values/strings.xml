@@ -1,10 +1,9 @@
 <resources>
-    <string name="app_name">Calculadora de combustivel</string>
-    <string name="title">Alcool ou Gasolina</string>
-    <string name="description">Melhor opção para seu carro flex!</string>
-    <string name="price_alcohol">Digite o preço do alcool</string>
-    <string name="price_gasoline">Digite o preço da gasolina</string>
+    <string name="app_name">Conversor de Medidas M => CM</string>
+    <string name="title">Converta metros para centimetros</string>
+    <string name="meters">Digite o metro</string>
+    <string name="name">Digite seu nome</string>
     <string name="result">Nenhuma opção escolhida</string>
-    <string name="calculate">Calcular</string>
-    <string name="simbol">Simbolo da bomba de gasolina</string>
+    <string name="convert">Converter</string>
+    <string name="simbol">Simbolo do dinheirinho</string>
 </resources>
