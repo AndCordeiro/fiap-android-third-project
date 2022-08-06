@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/ivGas"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@drawable/ic_baseline_local_gas_station_24"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/simbol"/>
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="14sp"
+        android:layout_marginTop="32dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAlcohol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <EditText
+            android:id="@+id/etAlcohol"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/price_alcohol"
+            android:background="@color/white"
+            android:inputType="numberDecimal"
+            android:autofillHints="" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilGasoline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/etGasoline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/price_gasoline"
+            android:background="@color/white"
+            android:inputType="numberDecimal"
+            android:autofillHints="" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:layout_marginTop="34dp"/>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:textSize="14sp"
+        android:gravity="bottom"
+        android:layout_marginTop="32dp"
+        android:layout_weight="1"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
